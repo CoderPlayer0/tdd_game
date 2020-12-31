@@ -1,5 +1,7 @@
 package util;
 
+import common.TreasureBoxCommon;
+import org.junit.Assert;
 import org.junit.Test;
 import pojo.HashAndSecretNum;
 
@@ -13,10 +15,8 @@ public class HashUtilsTest {
 
 	@Test
 	public void getHashAndSecretNumTest() {
-		/*String hashStr = 1 + "" + "0";
-		HashAndSecretNum hashAndSecretNum = HashUtils.getHashAndSecretNum(hashStr);
-		if (hashAndSecretNum != null) {
-			System.out.println(hashAndSecretNum.toString());
-		}*/
+		String hashStr = 1 + "" + "0" + 1;
+		HashAndSecretNum hashAndSecretNum = TreasureBoxCommon.getHashAndSecretNum(hashStr);
+		Assert.assertEquals("算法有误",hashAndSecretNum.getSecretNum(),26937);
 	}
 }

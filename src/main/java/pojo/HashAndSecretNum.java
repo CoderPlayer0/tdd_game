@@ -16,9 +16,9 @@ public class HashAndSecretNum {
 	/**
 	 * 神秘数字
 	 */
-	private Integer secretNum;
+	private int secretNum;
 
-	public HashAndSecretNum(String hash, Integer secretNum) {
+	public HashAndSecretNum(String hash, int secretNum) {
 		this.hash = hash;
 		this.secretNum = secretNum;
 	}
@@ -27,7 +27,7 @@ public class HashAndSecretNum {
 		return hash;
 	}
 
-	public Integer getSecretNum() {
+	public int getSecretNum() {
 		return secretNum;
 	}
 
