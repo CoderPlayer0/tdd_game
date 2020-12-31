@@ -19,6 +19,16 @@ public class HashUtils {
 	 */
 	private static Logger logger = Logger.getLogger(HashUtils.class);
 
+	/**
+	 * UTF-8
+	 */
+	private static final String UTF_8 = "utf-8";
+
+	/**
+	 * SHA-256
+	 */
+	private static final String SHA_256 = "SHA-256";
+
 
 	/**
 	 * 获取hash值和神秘数字
@@ -31,8 +41,8 @@ public class HashUtils {
 		byte[] bytes;
 		String result;
 		try {
-			bytes = character.getBytes("UTF-8");
-			MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+			bytes = character.getBytes(UTF_8);
+			MessageDigest messageDigest = MessageDigest.getInstance(SHA_256);
 			messageDigest.update(bytes);
 			result = byte2Hex(messageDigest.digest());
 		} catch (NoSuchAlgorithmException e) {
