@@ -1,6 +1,5 @@
 import common.TreasureBoxCommon;
 import pojo.HashAndSecretNum;
-import pojo.TreasureBox;
 
 /**
  * 主函数，打开宝箱的启动类

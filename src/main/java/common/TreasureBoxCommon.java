@@ -1,7 +1,6 @@
 package common;
 
 import pojo.HashAndSecretNum;
-import pojo.TreasureBox;
 import util.HashUtils;
 
 /**
@@ -26,7 +25,7 @@ public class TreasureBoxCommon {
 	 **/
 	public static HashAndSecretNum getHashAndSecretNum(String strVal) {
 		int index = 1;
-		String hashVal = "";
+		String hashVal;
 		while(true){
 			strVal = strVal + index;
 			hashVal = HashUtils.getHashAndSecretNum(strVal);
