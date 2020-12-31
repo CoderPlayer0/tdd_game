@@ -34,20 +34,8 @@ public class TreasureBox {
 		return hashValue;
 	}
 
-	public String getLastHashValue() {
-		return lastHashValue;
-	}
-
-	public Integer getSecretNum() {
-		return secretNum;
-	}
-
-	public String getStatus() {
-		return status;
-	}
-
 	@Override
 	public String toString() {
-		return id + "号宝箱的神秘数字为：" + secretNum;
+		return id + "号宝箱的神秘数字为：" + secretNum + "，已开启宝箱";
 	}
 }

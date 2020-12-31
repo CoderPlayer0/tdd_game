@@ -14,7 +14,6 @@ public class TddGame {
 	/**
 	 * 打开宝箱的启动类
 	 *
-	 * @author liuYunCai
 	 * @date 2020/12/31 15:38
 	 **/
 	public static void main(String[] args) {
@@ -24,6 +23,8 @@ public class TddGame {
 			if (treasureBox != null) {
 				lastHash = treasureBox.getHashValue();
 				System.out.println(treasureBox.toString());
+			} else {
+				System.out.println("当前宝箱未找到神秘数字，无法开启！");
 			}
 		}
 	}

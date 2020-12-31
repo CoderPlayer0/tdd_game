@@ -19,8 +19,19 @@ public class HashUtils {
 	 * 宝箱开启规则
 	 */
 	private static final String OPEN_RULE = "00000";
+
+	/**
+	 * 记录日志
+	 */
 	private static Logger logger = Logger.getLogger(HashUtils.class);
 
+	/**
+	 * 获取hash值和神秘数字
+	 *
+	 * @date 2020/12/31 16:41
+	 * @param character 拼接字符串
+	 * @return pojo.HashAndSecretNum
+	 **/
 	public static HashAndSecretNum getHashAndSecretNum(String character) {
 		int secretNum = 0;
 		String secretStr = secretNum + "";
