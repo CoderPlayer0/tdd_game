@@ -25,13 +25,10 @@ public class TreasureBoxCommon {
 	 **/
 	public static HashAndSecretNum getHashAndSecretNum(String strVal) {
 		int index = 1;
-		String hashVal;
-		while(true){
+		String hashVal = "";
+		while (!hashVal.startsWith(OPEN_RULE)) {
 			strVal = strVal + index;
 			hashVal = HashUtils.getHashAndSecretNum(strVal);
-			if(hashVal!=null && hashVal.startsWith(OPEN_RULE)){
-				break;
-			}
 			index++;
 		}
 		return new HashAndSecretNum(hashVal, index);
