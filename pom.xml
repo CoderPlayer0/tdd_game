@@ -1,4 +1,3 @@
-<<<<<<< .mine
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -11,7 +10,6 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <!-- log4j日志文件管理包版本 -->
         <slf4j.version>1.6.6</slf4j.version>
         <log4j.version>1.2.12</log4j.version>
     </properties>
@@ -24,8 +22,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 日志文件管理包 -->
-        <!-- log start -->
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -43,49 +39,3 @@
         </dependency>
     </dependencies>
 </project>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
-    <groupId>tdd_game</groupId>
-    <artifactId>tdd_game</artifactId>
-    <version>1.0-SNAPSHOT</version>
-
-
-</project>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> .theirs
