@@ -19,6 +19,7 @@ public class TddGame {
 	public static void main(String[] args) {
 		String lastHash = "0";
 		for (int id = 1; id <= SIZE; id++) {
+			System.out.println("正在查找宝箱" + id + "的神秘数字。。。。");
 			TreasureBox treasureBox = TreasureBoxCommon.getTreasureBox(id, lastHash);
 			if (treasureBox != null) {
 				lastHash = treasureBox.getHashValue();
