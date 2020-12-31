@@ -1,7 +1,4 @@
-<<<<<<< .mine
 package pojo;
-
-import java.sql.Timestamp;
 
 /**
  * 宝箱对象
@@ -13,8 +10,6 @@ public class TreasureBox {
 
 	private int id;
 
-	private Long timestamp;
-
 	private String hashValue;
 
 	private String lastHashValue;
@@ -23,12 +18,16 @@ public class TreasureBox {
 
 	private String status;
 
-	public int getId() {
-		return id;
+	public TreasureBox(Integer id, String hashValue, String lastHashValue, Integer secretNum, String status) {
+		this.id = id;
+		this.hashValue = hashValue;
+		this.lastHashValue = lastHashValue;
+		this.secretNum = secretNum;
+		this.status = status;
 	}
 
-	public Long getTimestamp() {
-		return timestamp;
+	public int getId() {
+		return id;
 	}
 
 	public String getHashValue() {
@@ -47,95 +46,8 @@ public class TreasureBox {
 		return status;
 	}
 
-	public TreasureBox(Integer id, Long timestamp, String hashValue, String lastHashValue, Integer secretNum, String status) {
-		this.id = id;
-		this.timestamp = timestamp;
-		this.hashValue = hashValue;
-		this.lastHashValue = lastHashValue;
-		this.secretNum = secretNum;
-		this.status = status;
-	}
-
 	@Override
 	public String toString() {
-		return "pojo.TreasureBox{" +
-				"id=" + id +
-				", timestamp=" + timestamp +
-				", hashValue='" + hashValue + '\'' +
-				", lastHashValue='" + lastHashValue + '\'' +
-				", secretNum=" + secretNum +
-				", status='" + status + '\'' +
-				'}';
+		return id + "号宝箱的神秘数字为：" + secretNum;
 	}
 }
-=======
-package pojo;
-
-import java.sql.Timestamp;
-
-/**
- * 宝箱对象
- *
- * @author liuYunCai
- * @date 2020/12/31 14:59
- **/
-public class TreasureBox {
-
-	private Integer id;
-
-	private Timestamp timestamp;
-
-	private String hashValue;
-
-	private String lastHashValue;
-
-	private int secretNum;
-
-	private String status;
-
-
-
-	@Override
-	public String toString() {
-		return "pojo.TreasureBox{" +
-				"id=" + id +
-				", timestamp=" + timestamp +
-				", hashValue='" + hashValue + '\'' +
-				", lastHashValue='" + lastHashValue + '\'' +
-				", secretNum=" + secretNum +
-				", status='" + status + '\'' +
-				'}';
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> .theirs
