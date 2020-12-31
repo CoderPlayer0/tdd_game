@@ -16,18 +16,11 @@ public class TreasureBox {
 
 	private Integer secretNum;
 
-	private String status;
-
-	public TreasureBox(Integer id, String hashValue, String lastHashValue, Integer secretNum, String status) {
+	public TreasureBox(Integer id, String hashValue, String lastHashValue, Integer secretNum) {
 		this.id = id;
 		this.hashValue = hashValue;
 		this.lastHashValue = lastHashValue;
 		this.secretNum = secretNum;
-		this.status = status;
-	}
-
-	public int getId() {
-		return id;
 	}
 
 	public String getHashValue() {

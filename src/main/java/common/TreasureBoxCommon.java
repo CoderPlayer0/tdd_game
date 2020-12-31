@@ -23,7 +23,7 @@ public class TreasureBoxCommon {
 		String hashStr = id + "" + lastHash;
 		HashAndSecretNum hashAndSecretNum = HashUtils.getHashAndSecretNum(hashStr);
 		if (hashAndSecretNum != null) {
-			return new TreasureBox(id, hashAndSecretNum.getHash(), lastHash, hashAndSecretNum.getSecretNum(), "1");
+			return new TreasureBox(id, hashAndSecretNum.getHash(), lastHash, hashAndSecretNum.getSecretNum());
 		}
 		return null;
 	}
