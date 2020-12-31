@@ -1,4 +1,5 @@
 import common.TreasureBoxCommon;
+import pojo.HashAndSecretNum;
 import pojo.TreasureBox;
 
 /**
@@ -20,13 +21,10 @@ public class TddGame {
 		String lastHash = "0";
 		for (int id = 1; id <= SIZE; id++) {
 			System.out.println("正在打开宝箱" + id + "。。。。");
-			TreasureBox treasureBox = TreasureBoxCommon.getTreasureBox(id, lastHash);
-			if (treasureBox != null) {
-				lastHash = treasureBox.getHashValue();
-				System.out.println(treasureBox.toString());
-			} else {
-				System.out.println("当前宝箱未找到神秘数字，无法开启！");
-			}
+			String hashStr = id + "" + lastHash;
+			HashAndSecretNum hashAndSecretNum = TreasureBoxCommon.getHashAndSecretNum(hashStr);
+			lastHash = hashAndSecretNum.getHash();
+			System.out.println("宝箱"+id+"的神秘数字为："+hashAndSecretNum.getSecretNum());
 		}
 	}
 }

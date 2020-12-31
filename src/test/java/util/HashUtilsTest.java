@@ -13,10 +13,10 @@ public class HashUtilsTest {
 
 	@Test
 	public void getHashAndSecretNumTest() {
-		String hashStr = 1 + "" + "0";
+		/*String hashStr = 1 + "" + "0";
 		HashAndSecretNum hashAndSecretNum = HashUtils.getHashAndSecretNum(hashStr);
 		if (hashAndSecretNum != null) {
 			System.out.println(hashAndSecretNum.toString());
-		}
+		}*/
 	}
 }

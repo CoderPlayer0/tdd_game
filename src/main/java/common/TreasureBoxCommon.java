@@ -13,18 +13,25 @@ import util.HashUtils;
 public class TreasureBoxCommon {
 
 	/**
+	 * 宝箱开启规则
+	 */
+	private static final String OPEN_RULE = "00000";
+
+	/**
 	 * 根据宝箱编号打开宝箱
 	 *
-	 * @param id 宝箱编号
+	 * @param strVal 组装字符串
 	 * @return 宝箱
 	 * @date 2020/12/31 15:41
 	 **/
-	public static TreasureBox getTreasureBox(int id, String lastHash) {
-		String hashStr = id + "" + lastHash;
-		HashAndSecretNum hashAndSecretNum = HashUtils.getHashAndSecretNum(hashStr);
-		if (hashAndSecretNum != null) {
-			return new TreasureBox(id, hashAndSecretNum.getHash(), lastHash, hashAndSecretNum.getSecretNum());
+	public static HashAndSecretNum getHashAndSecretNum(String strVal) {
+		int index = 1;
+		String hashVal = "";
+		while (!hashVal.startsWith(OPEN_RULE)) {
+			strVal = strVal + index;
+			hashVal = HashUtils.getHashAndSecretNum(strVal);
+			index++;
 		}
-		return null;
+		return new HashAndSecretNum(hashVal, index);
 	}
 }
